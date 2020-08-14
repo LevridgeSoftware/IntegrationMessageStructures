@@ -1,0 +1,25 @@
+{
+    "recommendationId": "TB-123460",
+    "recommendationDescription": "Fert Mix Test Product ID",
+    "growerId": "CUS-000071",
+    "farmId": "COP000010",
+    "fieldId": "CST-000122",
+    "blend": true,
+    "recommendationLines": [
+        {
+            "productID": "200001",
+            "quantity": 20000,
+            "uomID": "lb"
+        },
+        {
+            "productID": "200003",
+            "quantity": 15000,
+            "uomID": "lb"
+        },
+        {
+            "productID": "100001 :  :  :  : Bulk",
+            "quantity": 15,
+            "uomID": "gal"
+        }
+    ]
+}

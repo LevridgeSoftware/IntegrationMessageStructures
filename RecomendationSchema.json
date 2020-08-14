@@ -1,0 +1,186 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "recommendationId": "TB-123460",
+            "recommendationDescription": "Fert Mix Test Product ID",
+            "growerId": "CUS-000071",
+            "farmId": "COP000010",
+            "fieldId": "CST-000122",
+            "blend": true,
+            "recommendationLines": [
+                {
+                    "productID": "200001",
+                    "quantity": 20000,
+                    "uomID": "lb"
+                },
+                {
+                    "productID": "200003",
+                    "quantity": 15000,
+                    "uomID": "lb"
+                },
+                {
+                    "productID": "100001 :  :  :  : Bulk",
+                    "quantity": 15,
+                    "uomID": "gal"
+                }
+            ]
+        }
+    ],
+    "required": [
+        "recommendationId",
+        "recommendationDescription",
+        "growerId",
+        "farmId",
+        "fieldId",
+        "blend",
+        "recommendationLines"
+    ],
+    "properties": {
+        "recommendationId": {
+            "$id": "#/properties/recommendationId",
+            "type": "string",
+            "title": "The recommendationId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "TB-123460"
+            ]
+        },
+        "recommendationDescription": {
+            "$id": "#/properties/recommendationDescription",
+            "type": "string",
+            "title": "The recommendationDescription schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Fert Mix Test Product ID"
+            ]
+        },
+        "growerId": {
+            "$id": "#/properties/growerId",
+            "type": "string",
+            "title": "The growerId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "CUS-000071"
+            ]
+        },
+        "farmId": {
+            "$id": "#/properties/farmId",
+            "type": "string",
+            "title": "The farmId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "COP000010"
+            ]
+        },
+        "fieldId": {
+            "$id": "#/properties/fieldId",
+            "type": "string",
+            "title": "The fieldId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "CST-000122"
+            ]
+        },
+        "blend": {
+            "$id": "#/properties/blend",
+            "type": "boolean",
+            "title": "The blend schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                true
+            ]
+        },
+        "recommendationLines": {
+            "$id": "#/properties/recommendationLines",
+            "type": "array",
+            "title": "The recommendationLines schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "productID": "200001",
+                        "quantity": 20000,
+                        "uomID": "lb"
+                    },
+                    {
+                        "productID": "200003",
+                        "quantity": 15000,
+                        "uomID": "lb"
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/recommendationLines/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/recommendationLines/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "productID": "200001",
+                                "quantity": 20000,
+                                "uomID": "lb"
+                            }
+                        ],
+                        "required": [
+                            "productID",
+                            "quantity",
+                            "uomID"
+                        ],
+                        "properties": {
+                            "productID": {
+                                "$id": "#/properties/recommendationLines/items/anyOf/0/properties/productID",
+                                "type": "string",
+                                "title": "The productID schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "200001"
+                                ]
+                            },
+                            "quantity": {
+                                "$id": "#/properties/recommendationLines/items/anyOf/0/properties/quantity",
+                                "type": "integer",
+                                "title": "The quantity schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    20000
+                                ]
+                            },
+                            "uomID": {
+                                "$id": "#/properties/recommendationLines/items/anyOf/0/properties/uomID",
+                                "type": "string",
+                                "title": "The uomID schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "lb"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
